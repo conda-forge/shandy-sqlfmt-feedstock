@@ -1,5 +1,5 @@
 {% set name = "shandy-sqlfmt" %}
-{% set version = "0.21.0" %}
+{% set version = "0.21.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/shandy_sqlfmt-{{ version }}.tar.gz
-  sha256: af5d7bd503668c05489da118ff97a65a396fafeb534040808e672a3a7e1757ea
+  sha256: 7070712d0f7bc033e6150f8127e13107e02685c3f2015ea21cf4bcc7ef26b78a
 
 build:
   entry_points:
@@ -27,7 +27,7 @@ requirements:
     - python >=3.7.0,<4.0.0
     - click >=8.0.0,<9.0.0
     - tqdm >=4.0.0,<5.0.0
-    - platformdirs >=2.4,<4.0
+    - platformdirs >=2.4,<5.0
     - backports.cached-property >=1.0.2,<2.0.0
     - importlib-metadata
     - tomli >=2.0.0,<3.0.0
