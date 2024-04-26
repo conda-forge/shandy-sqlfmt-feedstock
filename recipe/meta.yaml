@@ -1,5 +1,5 @@
 {% set name = "shandy-sqlfmt" %}
-{% set version = "0.21.2" %}
+{% set version = "0.21.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/shandy_sqlfmt-{{ version }}.tar.gz
-  sha256: 490bbb98d9c76ca414fad36442183b49d23094c611aed68f741a9c7fd9cb85ea
+  sha256: 500a88a133585432aecf7761964213b9b756abfd6f33f5d53e052d2e1d0584da
 
 build:
   entry_points:
