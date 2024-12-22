@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/shandy_sqlfmt-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/shandy_sqlfmt-{{ version }}.tar.gz
   sha256: ae34d34dc88ef4a2c97677d7d3d95d7f362908aa6f97e3fb0529cab4a96799ba
 
 build:
@@ -15,16 +15,16 @@ build:
     - sqlfmt_primer = sqlfmt_primer.primer:sqlfmt_primer
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
   run:
     - jinja2 >=3.0.0,<4.0.0
-    - python >=3.7.0,<4.0.0
+    - python >={{ python_min }},<4.0.0
     - click >=8.0.0,<9.0.0
     - tqdm >=4.0.0,<5.0.0
     - platformdirs >=2.4,<5.0
@@ -46,6 +46,7 @@ test:
     # - sqlfmt_primer --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://sqlfmt.com
