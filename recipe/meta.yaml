@@ -1,5 +1,5 @@
 {% set name = "shandy-sqlfmt" %}
-{% set version = "0.27.0" %}
+{% set version = "0.28.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/shandy_sqlfmt-{{ version }}.tar.gz
-  sha256: 1c9ac6beb5f17f66e7b87b4c70be586e87db538cd7d72f42dedb85132e8b3a96
+  sha256: 7ae40c42a3c2c3cd0d53c6ab238f71ce47c5116b8320373d353777e0dd6c077c
 
 build:
   entry_points:
@@ -23,13 +23,13 @@ requirements:
     - poetry-core >=1.0.0
     - pip
   run:
-    - jinja2 >=3.0.0,<4.0.0
+    - jinja2 >=3.0,<4
     - python >={{ python_min }},<4.0.0
-    - click >=8.0.0,<9.0.0
-    - tqdm >=4.0.0,<5.0.0
+    - click >=8.1,<8.2
+    - tqdm >=4.67,<5
     - platformdirs >=2.4,<5.0
     - backports.cached-property >=1.0.2,<2.0.0
-    - importlib-metadata
+    - importlib-metadata >=8.0,<9
     - tomli >=2.0.0,<3.0.0
   run_constrained:
     - black *
