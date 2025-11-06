@@ -3,7 +3,7 @@ About shandy-sqlfmt-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/shandy-sqlfmt-feedstock/blob/main/LICENSE.txt)
 
-Home: https://sqlfmt.com
+Home: https://sqlfmt.com/
 
 Package license: Apache-2.0
 
